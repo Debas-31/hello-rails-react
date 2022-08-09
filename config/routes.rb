@@ -5,7 +5,13 @@ Rails.application.routes.draw do
       get 'greetings', to: 'greetings#index'
     end
   end
-  
+
+   # react routes
+
+   get '*page', to: 'static#index', constraints: ->(req) do
+    !req.xhr? && req.format.html?
+  end
+
   # Defines the root path route ("/")
   root "static#index"
 end
