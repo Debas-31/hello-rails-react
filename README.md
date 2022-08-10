@@ -1,24 +1,73 @@
-# README
+# Hello Rails React App
+>A simple application that contains the setup of rails and react in one application. The App loads a random greeting message from the database when the page loads.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built With
+- Ruby
+- Ruby on Rails
+- HTML
+- TailwindCSS and CSS
 
-Things you may want to cover:
+## prerequisites
+``` 
+  Ruby
+  rails version 7.x gem package 
+```
+### Development (Running locally)
 
-* Ruby version
+- git clone the project
 
-* System dependencies
+```bash 
+git clone git@github.com:Debas-31/hello-rails-react.git
 
-* Configuration
+cd rails-budget-app
+```
 
-* Database creation
+## Setup
+### Install gems with:
+```
+bundle install
+```
+### Setup database with:
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
+### Install dependencies
+```
+npm i 
+or
+npm install
+```
+## Usage
+### Start server with:
+```
+rails server
+```
+Visit [http://localhost:3000/]() in your browser.
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **Debas Gebreslasie**
 
-* Deployment instructions
+- [GitHub](https://github.com/Debas-31)
+- [Twitter](https://twitter.com/DEBSH76956492)
+- [LinkedIn](https://www.linkedin.com/in/debas-gebrengus)
 
-* ...
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Debas-31/hello-rails-react/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+- Ruby Community
+- rails developers
+
+## 📝 License
+
+[MIT licensed](https://github.com/Debas-31/hello-rails-react/blob/dev/LICENSE).
