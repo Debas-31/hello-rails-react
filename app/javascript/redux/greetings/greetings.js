@@ -1,14 +1,32 @@
-import { configStore, combineReducers, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
-import thunk from 'redux-thunk';
-import greetingsReducer from './greetings/greetings';
+import Axios from 'axios';
 
-const reducer = combineReducers({
-   greetingsReducer,
+// conts
+const FETCH_GREETING = 'hello-rails-react/greetings/FETCH_GREETING';
+
+// actions
+const fetchGreeting = (payload) => ({
+  type: FETCH_GREETING,
+  payload,
 });
 
-const store = configStore(
-  reducer, applyMiddleware(logger, thunk),
-);
+// state
+const initialState = [];
 
-export default store;
+export const fetchGreetingApi = () => async (dispatch) => {
+  const returnValue = await Axios.get('api/v1/greetings');
+  const greeting = returnValue.data.data.greeting.message
+  console.log(greeting)
+  dispatch(fetchGreeting(greeting));
+};
+
+// reducer
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_GREETING:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+export default reducer;
