@@ -20,7 +20,7 @@ export const fetchGreetingApi = () => async (dispatch) => {
 };
 
 // reducer
-const reducer = (state = initialState, action) => {
+const greetingsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_GREETING:
       return action.payload;
@@ -29,4 +29,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default greetingsReducer;

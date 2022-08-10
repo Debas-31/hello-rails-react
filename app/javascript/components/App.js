@@ -1,7 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux';
-import {  BrowserRouter, Routes, Route } from 'react-router-dom';
-// import { Provider } from 'react-redux';
+import {  BrowserRouter, Routes, Route } from 'react-router-dom'
 import Greeting from './Greeting';
 import Header from './Header';
 import Home from './Home';
@@ -9,7 +8,7 @@ import store from '../redux/ConfigureStore';
 
 const App = () => {
   return (
-      // <Provider store={store}> 
+      <Provider store={store}> 
       <BrowserRouter>
       <Header />
         <Routes>
@@ -17,7 +16,7 @@ const App = () => {
           <Route exact path="/greeting" element={ (<Greeting />) } />
         </Routes>
       </BrowserRouter>
-    // </Provider>
+    </Provider>
   )
 }
 

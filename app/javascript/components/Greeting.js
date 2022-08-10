@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchGreetingApi } from '../redux/greetings/greetings';
 
 const Greeting =() => {
-  const greeting = useSelector((state) => state.greetingsReducer);
+  const greeting = useSelector((state) => state.greeting);
   const dispatch = useDispatch();
   useEffect(() => {
       dispatch(fetchGreetingApi());
